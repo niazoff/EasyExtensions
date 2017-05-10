@@ -6,6 +6,8 @@
 //  Copyright © 2017 Natanel Niazoff. All rights reserved.
 //
 
+import Foundation
+
 extension Date {
     static var today: Int {
         return Calendar.current.component(.weekday, from: Date())

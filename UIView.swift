@@ -11,10 +11,18 @@ import UIKit
 extension UIView {
     struct Shadow {
         let path: CGPath?
-        let color: UIColor?
+        let color: UIColor
         let offset: CGSize
         let radius: CGFloat
         let opacity: Float
+        
+        init(path: CGPath? = nil, color: UIColor = UIColor.black, offset: CGSize = CGSize(width: 0, height: -3.0), radius: CGFloat = 3.0, opacity: Float) {
+            self.path = path
+            self.color = color
+            self.offset = offset
+            self.radius = radius
+            self.opacity = opacity
+        }
     }
     
     class func viewFor(imageName: String) -> UIView? {
@@ -46,7 +54,7 @@ extension UIView {
     func add(_ shadow: Shadow) {
         layer.masksToBounds = false
         layer.shadowPath = shadow.path
-        layer.shadowColor = shadow.color?.cgColor
+        layer.shadowColor = shadow.color.cgColor
         layer.shadowOffset = shadow.offset
         layer.shadowRadius = shadow.radius
         layer.shadowOpacity = shadow.opacity

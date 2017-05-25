@@ -15,6 +15,12 @@ extension Date {
     static var currentHebrewYear: Int {
         return Calendar(identifier: .hebrew).component(.year, from: Date())
     }
+    var shortTimeString: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeStyle = .short
+        dateFormatter.dateStyle = .none
+        return dateFormatter.string(from: self)
+    }
     var minutesFromCurrentDate: Int {
         return Date().minutesUntil(date: self)
     }

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name             = 'EasyExtensions'
-s.version          = '0.1.1'
+s.version          = '0.1.2'
 s.summary          = 'A growing collection of simple and easy to use Swift extensions.'
 
 s.description      = <<-DESC

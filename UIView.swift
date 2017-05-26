@@ -8,8 +8,8 @@
 
 import UIKit
 
-extension UIView {
-    struct Shadow {
+public extension UIView {
+    public struct Shadow {
         let path: CGPath?
         let color: UIColor
         let offset: CGSize
@@ -25,7 +25,7 @@ extension UIView {
         }
     }
     
-    class func viewFor(imageName: String) -> UIView? {
+    public class func viewFor(imageName: String) -> UIView? {
         if let image = UIImage(named: imageName) {
             let imageView = UIImageView(image: image)
             imageView.contentMode = .center
@@ -34,7 +34,7 @@ extension UIView {
         return nil
     }
     
-    class func viewFor(text: String, size: CGFloat = 24, color: UIColor = UIColor.black) -> UIView {
+    public class func viewFor(text: String, size: CGFloat = 24, color: UIColor = UIColor.black) -> UIView {
         let labelView = UILabel()
         labelView.text = text
         labelView.font = UIFont.systemFont(ofSize: size)
@@ -43,7 +43,7 @@ extension UIView {
         return labelView
     }
     
-    class func hairlineView(withColor color: UIColor = UIColor.lightGray, origin: CGPoint = CGPoint.zero, width: CGFloat) -> UIView {
+    public class func hairlineView(withColor color: UIColor = UIColor.lightGray, origin: CGPoint = CGPoint.zero, width: CGFloat) -> UIView {
         let view = UIView()
         view.frame.origin = origin
         view.frame.size = CGSize(width: width, height: 1/UIScreen.main.scale)
@@ -51,7 +51,7 @@ extension UIView {
         return view
     }
     
-    func add(_ shadow: Shadow) {
+    public func add(_ shadow: Shadow) {
         layer.masksToBounds = false
         layer.shadowPath = shadow.path
         layer.shadowColor = shadow.color.cgColor
@@ -60,7 +60,7 @@ extension UIView {
         layer.shadowOpacity = shadow.opacity
     }
     
-    func expand(_ multiplier: CGFloat) -> Self {
+    public func expand(_ multiplier: CGFloat) -> Self {
         frame.size = CGSize(width: frame.size.width * multiplier, height: frame.size.height * multiplier)
         return self
     }

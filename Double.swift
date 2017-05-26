@@ -8,8 +8,8 @@
 
 import Foundation
 
-extension Double {
-    var nearest100th: Double {
+public extension Double {
+    public var nearest100th: Double {
         return (self * 100).rounded()/100
     }
 }

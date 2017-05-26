@@ -8,8 +8,8 @@
 
 import MapKit
 
-extension MKMapView {
-    class Annotation: NSObject, MKAnnotation {
+public extension MKMapView {
+    public class Annotation: NSObject, MKAnnotation {
         var coordinate: CLLocationCoordinate2D
         
         init(coordinate: CLLocationCoordinate2D) {
@@ -17,7 +17,7 @@ extension MKMapView {
         }
     }
     
-    func addAnnotation(at location: CLLocation) -> MKAnnotation {
+    public func addAnnotation(at location: CLLocation) -> MKAnnotation {
         let annotation = Annotation(coordinate: location.coordinate)
         addAnnotation(annotation)
         return annotation

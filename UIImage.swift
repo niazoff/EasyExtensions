@@ -8,16 +8,16 @@
 
 import UIKit
 
-extension UIImage {
-    var aspectRatio: CGFloat {
+public extension UIImage {
+    public var aspectRatio: CGFloat {
         return size.height/size.width
     }
     
-    var pngData: Data? {
+    public var pngData: Data? {
         return UIImagePNGRepresentation(self)
     }
     
-    func jpegData(_ compressionQuality: CGFloat) -> Data? {
+    public func jpegData(_ compressionQuality: CGFloat) -> Data? {
         return UIImageJPEGRepresentation(self, compressionQuality)
     }
 }

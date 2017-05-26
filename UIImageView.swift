@@ -8,6 +8,6 @@
 
 import UIKit
 
-extension UIImageView {
+public extension UIImageView {
     
 }

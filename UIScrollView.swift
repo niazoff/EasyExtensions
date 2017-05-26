@@ -8,14 +8,14 @@
 
 import UIKit
 
-extension UIScrollView {
-    var isAtTop: Bool {
+public extension UIScrollView {
+    public var isAtTop: Bool {
         return contentOffset.y <= -contentInset.top
     }
-    var isAtBottomWithInset: Bool {
+    public var isAtBottomWithInset: Bool {
         return contentOffset.y >= (contentSize.height + contentInset.bottom - bounds.height)
     }
-    var isAtBottomWithoutInset: Bool {
+    public var isAtBottomWithoutInset: Bool {
         return contentOffset.y >= (contentSize.height - bounds.height)
     }
 }

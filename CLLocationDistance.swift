@@ -8,8 +8,8 @@
 
 import CoreLocation
 
-extension CLLocationDistance {
-    var miles: CLLocationDistance {
+public extension CLLocationDistance {
+    public var miles: CLLocationDistance {
         return self/1609.344
     }
 }

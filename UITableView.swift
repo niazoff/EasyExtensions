@@ -8,8 +8,8 @@
 
 import UIKit
 
-extension UITableView {
-    var indexPaths: [IndexPath] {
+public extension UITableView {
+    public var indexPaths: [IndexPath] {
         var indexPaths = [IndexPath]()
         for section in 0..<numberOfSections {
             for row in 0..<numberOfRows(inSection: section) {
@@ -19,11 +19,11 @@ extension UITableView {
         return indexPaths
     }
     
-    func reloadData(with animation: UITableViewRowAnimation) {
+    public func reloadData(with animation: UITableViewRowAnimation) {
         reloadSections(IndexSet(integersIn: 0..<numberOfSections), with: animation)
     }
     
-    func scrollToTop(animated: Bool) {
+    public func scrollToTop(animated: Bool) {
         let topIndexPath = IndexPath(row: 0, section: 0)
         if topIndexPath.isInRange(of: self) {
             scrollToRow(at: topIndexPath, at: .top, animated: animated)

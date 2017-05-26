@@ -8,23 +8,23 @@
 
 import Foundation
 
-extension Date {
-    static var today: Int {
+public extension Date {
+    public static var today: Int {
         return Calendar.current.component(.weekday, from: Date())
     }
-    static var currentHebrewYear: Int {
+    public static var currentHebrewYear: Int {
         return Calendar(identifier: .hebrew).component(.year, from: Date())
     }
-    var shortTimeString: String {
+    public var shortTimeString: String {
         let dateFormatter = DateFormatter()
         dateFormatter.timeStyle = .short
         dateFormatter.dateStyle = .none
         return dateFormatter.string(from: self)
     }
-    var minutesFromCurrentDate: Int {
+    public var minutesFromCurrentDate: Int {
         return Date().minutesUntil(date: self)
     }
-    func minutesUntil(date: Date) -> Int {
+    public func minutesUntil(date: Date) -> Int {
         return Calendar.current.dateComponents([.minute], from: self, to: date).minute ?? 0
     }
 }

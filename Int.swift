@@ -6,8 +6,8 @@
 //  Copyright © 2017 Natanel Niazoff. All rights reserved.
 //
 
-extension Int {
-    var string: String? {
+public extension Int {
+    public var string: String? {
         return String(self)
     }
 }

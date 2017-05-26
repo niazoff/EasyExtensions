@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension UIStoryboard {
+extension UIStoryboard {
     public static var main: UIStoryboard {
         return UIStoryboard(name: "Main", bundle: Bundle.main)
     }

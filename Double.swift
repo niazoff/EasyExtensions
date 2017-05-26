@@ -8,7 +8,7 @@
 
 import Foundation
 
-public extension Double {
+extension Double {
     public var nearest100th: Double {
         return (self * 100).rounded()/100
     }

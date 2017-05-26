@@ -8,7 +8,7 @@
 
 import Foundation
 
-public extension Date {
+extension Date {
     public static var today: Int {
         return Calendar.current.component(.weekday, from: Date())
     }

@@ -8,9 +8,9 @@
 
 import MapKit
 
-public extension MKMapView {
+extension MKMapView {
     public class Annotation: NSObject, MKAnnotation {
-        var coordinate: CLLocationCoordinate2D
+        public var coordinate: CLLocationCoordinate2D
         
         init(coordinate: CLLocationCoordinate2D) {
             self.coordinate = coordinate

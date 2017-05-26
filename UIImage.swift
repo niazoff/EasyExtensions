@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension UIImage {
+extension UIImage {
     public var aspectRatio: CGFloat {
         return size.height/size.width
     }

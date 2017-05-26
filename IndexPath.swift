@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension IndexPath {
+extension IndexPath {
     public func isInRange(of tableView: UITableView) -> Bool {
         return section <= (tableView.numberOfSections - 1) && row <= (tableView.numberOfRows(inSection: section) - 1)
     }

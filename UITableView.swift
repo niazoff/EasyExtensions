@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension UITableView {
+extension UITableView {
     public var indexPaths: [IndexPath] {
         var indexPaths = [IndexPath]()
         for section in 0..<numberOfSections {

@@ -27,4 +27,8 @@ extension Date {
     public func minutesUntil(date: Date) -> Int {
         return Calendar.current.dateComponents([.minute], from: self, to: date).minute ?? 0
     }
+	mutating func addWeek() {
+        let week: TimeInterval = 60 * 60 * 24 * 7
+        addTimeInterval(week)
+    }
 }

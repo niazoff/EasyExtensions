@@ -34,10 +34,10 @@ extension UIView {
         return nil
     }
     
-    public class func viewFor(text: String, size: CGFloat = 24, color: UIColor = UIColor.black) -> UIView {
+    public class func viewFor(text: String, size: CGFloat = 24, weight: UIFont.Weight = .regular, color: UIColor = UIColor.black) -> UIView {
         let labelView = UILabel()
         labelView.text = text
-        labelView.font = UIFont.systemFont(ofSize: size)
+        labelView.font = UIFont.systemFont(ofSize: size, weight: weight)
         labelView.textColor = color
         labelView.sizeToFit()
         return labelView

@@ -1,6 +1,6 @@
 //
 //  UIButton.swift
-//  Shnayim
+//  Extensions
 //
 //  Created by Natanel Niazoff on 10/27/17.
 //  Copyright © 2017 Natanel Niazoff. All rights reserved.

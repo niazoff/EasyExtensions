@@ -3,13 +3,13 @@
 //  Extensions
 //
 //  Created by Natanel Niazoff.
-//  Copyright © 2017 Natanel Niazoff. All rights reserved.
+//  Copyright © 2018 Natanel Niazoff. All rights reserved.
 //
 
 import UIKit
 
-extension UITableView {
-    public var indexPaths: [IndexPath] {
+public extension UITableView {
+    var allIndexPaths: [IndexPath] {
         var indexPaths = [IndexPath]()
         for section in 0..<numberOfSections {
             for row in 0..<numberOfRows(inSection: section) {
@@ -19,14 +19,11 @@ extension UITableView {
         return indexPaths
     }
     
-    public func reloadData(with animation: UITableViewRowAnimation) {
+    func reloadData(with animation: UITableViewRowAnimation) {
         reloadSections(IndexSet(integersIn: 0..<numberOfSections), with: animation)
     }
     
-    public func scrollToTop(animated: Bool) {
-        let topIndexPath = IndexPath(row: 0, section: 0)
-        if topIndexPath.isInRange(of: self) {
-            scrollToRow(at: topIndexPath, at: .top, animated: animated)
-        }
+    func scrollToTop(animated: Bool) {
+        scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: animated)
     }
 }

@@ -3,21 +3,21 @@
 //  Extensions
 //
 //  Created by Natanel Niazoff.
-//  Copyright © 2017 Natanel Niazoff. All rights reserved.
+//  Copyright © 2018 Natanel Niazoff. All rights reserved.
 //
 
 import UIKit
 
-extension UIImage {
-    public var aspectRatio: CGFloat {
+public extension UIImage {
+    var aspectRatio: CGFloat {
         return size.height/size.width
     }
     
-    public var pngData: Data? {
+    var pngData: Data? {
         return UIImagePNGRepresentation(self)
     }
     
-    public func jpegData(_ compressionQuality: CGFloat) -> Data? {
+    func jpegData(_ compressionQuality: CGFloat) -> Data? {
         return UIImageJPEGRepresentation(self, compressionQuality)
     }
 }

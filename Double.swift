@@ -9,7 +9,14 @@
 import Foundation
 
 public extension Double {
-    var toNearest100th: Double {
-        return (self * 100).rounded()/100
+    var priceString: String {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .currency
+        return numberFormatter.string(from: NSNumber(value: self))!
+    }
+    
+    func rounded(toPlaces places:Int) -> Double {
+        let divisor = pow(10.0, Double(places))
+        return (self * divisor).rounded()/divisor
     }
 }

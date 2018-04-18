@@ -16,7 +16,7 @@ public extension UIView {
         let radius: CGFloat
         let opacity: Float
         
-        init(path: CGPath? = nil, color: UIColor = UIColor.black, offset: CGSize = CGSize(width: 0, height: -3.0), radius: CGFloat = 3.0, opacity: Float) {
+        init(path: CGPath? = nil, color: UIColor = UIColor.black, offset: CGSize = CGSize(width: 0, height: 0), radius: CGFloat = 3.0, opacity: Float) {
             self.path = path
             self.color = color
             self.offset = offset
@@ -25,9 +25,8 @@ public extension UIView {
         }
     }
     
-    /// Adds a shadow to the view's layer. Calling this function will set the `masksToBounds` to `false`.
+    /// Adds a shadow to the view's layer. Layer's `masksToBounds` property must be set to `true` for this to work properly.
     func add(_ shadow: Shadow) {
-        layer.masksToBounds = false
         layer.shadowPath = shadow.path
         layer.shadowColor = shadow.color.cgColor
         layer.shadowOffset = shadow.offset

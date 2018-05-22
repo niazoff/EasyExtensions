@@ -9,6 +9,14 @@
 import Foundation
 
 extension Date {
+    var millisecondsSince1970: Int {
+        return Int((timeIntervalSince1970 * 1000).rounded())
+    }
+    
+    init(milliseconds: Int) {
+        self = Date(timeIntervalSince1970: TimeInterval(milliseconds/1000))
+    }
+    
     static var today: Int {
         return Calendar.current.component(.weekday, from: Date())
     }

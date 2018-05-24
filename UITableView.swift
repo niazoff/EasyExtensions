@@ -26,4 +26,9 @@ public extension UITableView {
     func scrollToTop(animated: Bool) {
         scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: animated)
     }
+    
+    func deselectSelectedRow() {
+        guard let indexPath = indexPathForSelectedRow else { return }
+        deselectRow(at: indexPath, animated: true)
+    }
 }

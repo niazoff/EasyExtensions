@@ -33,4 +33,13 @@ public extension UIView {
         layer.shadowRadius = shadow.radius
         layer.shadowOpacity = shadow.opacity
     }
+    
+    func fullViewConstraint(equalToMarginOf view: UIView) {
+        translatesAutoresizingMaskIntoConstraints = false
+        [rightAnchor.constraint(equalTo: view.layoutMarginsGuide.rightAnchor),
+         topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
+         leftAnchor.constraint(equalTo: view.layoutMarginsGuide.leftAnchor),
+         bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor)
+        ].forEach { $0.isActive = true }
+    }
 }

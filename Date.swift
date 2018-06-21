@@ -9,12 +9,12 @@
 import Foundation
 
 extension Date {
-    var millisecondsSince1970: Int {
-        return Int((timeIntervalSince1970 * 1000).rounded())
-    }
-    
     init(milliseconds: Int) {
         self = Date(timeIntervalSince1970: TimeInterval(milliseconds/1000))
+    }
+    
+    var millisecondsSince1970: Int {
+        return Int((timeIntervalSince1970 * 1000).rounded())
     }
     
     static var today: Int {
@@ -27,6 +27,16 @@ extension Date {
     
     var minutesFromCurrentDate: Int {
         return Date().minutesUntil(date: self)
+    }
+    
+    var daySuffix: String {
+        let dayOfMonth = Calendar.current.component(.day, from: self)
+        switch dayOfMonth {
+        case 1, 21, 31: return "st"
+        case 2, 22: return "nd"
+        case 3, 23: return "rd"
+        default: return "th"
+        }
     }
     
     func minutesUntil(date: Date) -> Int {

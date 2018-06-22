@@ -1,6 +1,6 @@
 //
 //  UIButton.swift
-//  Extensions
+//  EasyExtensions
 //
 //  Created by Natanel Niazoff on 10/27/17.
 //  Copyright © 2018 Natanel Niazoff. All rights reserved.

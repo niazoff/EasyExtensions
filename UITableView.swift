@@ -1,6 +1,6 @@
 //
 //  UITableView.swift
-//  Extensions
+//  EasyExtensions
 //
 //  Created by Natanel Niazoff.
 //  Copyright © 2018 Natanel Niazoff. All rights reserved.
@@ -9,6 +9,8 @@
 import UIKit
 
 public extension UITableView {
+    static var standardLeftInset: CGFloat = 15
+    
     var allIndexPaths: [IndexPath] {
         var indexPaths = [IndexPath]()
         for section in 0..<numberOfSections {

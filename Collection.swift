@@ -1,6 +1,6 @@
 //
 //  Collection.swift
-//  Extensions
+//  EasyExtensions
 //
 //  Created by Natanel Niazoff.
 //  Copyright © 2018 Natanel Niazoff. All rights reserved.

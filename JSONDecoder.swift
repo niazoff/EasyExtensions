@@ -1,6 +1,6 @@
 //
 //  JSONDecoder.swift
-//  Sammys
+//  EasyExtensions
 //
 //  Created by Natanel Niazoff on 3/28/18.
 //  Copyright © 2018 Natanel Niazoff. All rights reserved.

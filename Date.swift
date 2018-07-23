@@ -42,4 +42,8 @@ extension Date {
     func minutesUntil(date: Date) -> Int {
         return Calendar.current.dateComponents([.minute], from: self, to: date).minute ?? 0
     }
+    
+    func currentCalendarComponent(_ component: Calendar.Component) -> Int {
+        return Calendar.current.component(component, from: self)
+    }
 }

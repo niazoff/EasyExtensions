@@ -15,6 +15,11 @@ public extension Double {
         return numberFormatter.string(from: NSNumber(value: self))!
     }
     
+    /// Transfers a `Double` decimal dollar amount to cents as an `Int`.
+    func toCents() -> Int {
+        return Int(self * 100)
+    }
+    
     func rounded(toPlaces places:Int) -> Double {
         let divisor = pow(10.0, Double(places))
         return (self * divisor).rounded()/divisor

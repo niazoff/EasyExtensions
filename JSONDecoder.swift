@@ -12,7 +12,7 @@ enum FixtureError: Error {
     case fileNotFound
 }
 
-extension JSONDecoder {
+public extension JSONDecoder {
     private struct Constants {
         static let json = "json"
     }

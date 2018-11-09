@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension Array where Element == NSLayoutConstraint {
+public extension Array where Element == NSLayoutConstraint {
     func activateAll() {
         NSLayoutConstraint.activate(self)
     }

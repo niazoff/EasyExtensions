@@ -17,7 +17,7 @@ public extension MKMapView {
         }
     }
     
-    public func addAnnotation(at location: CLLocation) -> MKAnnotation {
+    func addAnnotation(at location: CLLocation) -> MKAnnotation {
         let annotation = Annotation(coordinate: location.coordinate)
         addAnnotation(annotation)
         return annotation

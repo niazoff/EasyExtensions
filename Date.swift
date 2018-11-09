@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Date {
+public extension Date {
     init(milliseconds: Int) {
         self = Date(timeIntervalSince1970: TimeInterval(milliseconds/1000))
     }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension URL {
+public extension URL {
     static func canOpen(_ urlString: String) -> Bool {
         guard let url = URL(string: urlString) else { return false }
         return UIApplication.shared.canOpenURL(url)

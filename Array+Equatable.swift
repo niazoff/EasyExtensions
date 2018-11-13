@@ -1,5 +1,5 @@
 //
-//  Array.swift
+//  Array+Equatable.swift
 //  EasyExtensions
 //
 //  Created by Natanel Niazoff.

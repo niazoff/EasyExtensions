@@ -12,4 +12,10 @@ extension Dictionary {
 	mutating func switchKey(_ oldKey: Key, to newKey: Key) {
 		if let oldKeyValue = removeValue(forKey: oldKey) { self[newKey] = oldKeyValue }
 	}
+	
+	func switchingKey(_ oldKey: Key, to newKey: Key) -> Dictionary {
+		var dictionary = self
+		dictionary.switchKey(oldKey, to: newKey)
+		return dictionary
+	}
 }

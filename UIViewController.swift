@@ -9,6 +9,8 @@
 import UIKit
 
 public extension UIViewController {
+	var isVisible: Bool { return isViewLoaded && view.window != nil }
+	
     func add(asChildViewController viewController: UIViewController) {
         addChildViewController(viewController)
         view.addSubview(viewController.view)

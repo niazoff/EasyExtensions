@@ -21,7 +21,7 @@ public extension UITableView {
         return indexPaths
     }
     
-    func reloadData(with animation: UITableViewRowAnimation) {
+    func reloadData(with animation: RowAnimation) {
         reloadSections(IndexSet(integersIn: 0..<numberOfSections), with: animation)
     }
     

@@ -12,7 +12,7 @@ public extension UIButton {
     struct Action {
         let target: Any?
         let action: Selector
-        let controlEvent: UIControlEvents
+        let controlEvent: Event
     }
     
     func add(_ action: Action) {

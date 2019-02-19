@@ -16,6 +16,6 @@ public extension URL {
     
     static func open(_ urlString: String, completed: ((Bool) -> Void)? = nil) {
         guard let url = URL(string: urlString) else { return }
-        return UIApplication.shared.open(url, options: [:], completionHandler: completed)
+        return UIApplication.shared.open(url, completionHandler: completed)
     }
 }

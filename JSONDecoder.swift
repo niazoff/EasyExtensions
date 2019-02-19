@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum FixtureError: Error {
+public enum FixtureError: Error {
     case fileNotFound
 }
 

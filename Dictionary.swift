@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Dictionary {
+public extension Dictionary {
 	mutating func switchKey(_ oldKey: Key, to newKey: Key) {
 		if let oldKeyValue = removeValue(forKey: oldKey) { self[newKey] = oldKeyValue }
 	}

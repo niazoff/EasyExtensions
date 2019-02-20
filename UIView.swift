@@ -47,15 +47,15 @@ public extension UIView {
     
     func fullViewConstraints(equalTo view: UIView, insetConstants: InsetConstants = .zero) -> [NSLayoutConstraint] {
         return [leftAnchor.constraint(equalTo: view.leftAnchor, constant: insetConstants.left),
-         topAnchor.constraint(equalTo: view.topAnchor, constant: insetConstants.top),
-         rightAnchor.constraint(equalTo: view.rightAnchor, constant: insetConstants.right),
-         bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: insetConstants.bottom)]
+                topAnchor.constraint(equalTo: view.topAnchor, constant: insetConstants.top),
+                rightAnchor.constraint(equalTo: view.rightAnchor, constant: insetConstants.right),
+                bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: insetConstants.bottom)]
     }
     
     func fullLayoutGuideConstraint(equalTo layoutGuide: UILayoutGuide, insetConstants: InsetConstants = .zero) -> [NSLayoutConstraint] {
         return [leftAnchor.constraint(equalTo: layoutGuide.leftAnchor, constant: insetConstants.left),
-         topAnchor.constraint(equalTo: layoutGuide.topAnchor, constant: insetConstants.top),
-         rightAnchor.constraint(equalTo: layoutGuide.rightAnchor, constant: insetConstants.right),
-         bottomAnchor.constraint(equalTo: layoutGuide.bottomAnchor, constant: insetConstants.bottom)]
+                topAnchor.constraint(equalTo: layoutGuide.topAnchor, constant: insetConstants.top),
+                rightAnchor.constraint(equalTo: layoutGuide.rightAnchor, constant: insetConstants.right),
+                bottomAnchor.constraint(equalTo: layoutGuide.bottomAnchor, constant: insetConstants.bottom)]
     }
 }

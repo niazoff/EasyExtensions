@@ -9,7 +9,7 @@
 import UIKit
 
 public extension UICollectionReusableView {
-	var collectionView: UICollectionView? {
-		return next(UICollectionView.self)
-	}
+    var collectionView: UICollectionView? {
+        return next(UICollectionView.self)
+    }
 }

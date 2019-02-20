@@ -19,10 +19,10 @@ public extension Double {
         let divisor = pow(10.0, Double(places))
         return (self * divisor).rounded() / divisor
     }
-	
-	func priceRounded() -> Double { return rounded(toPlaces: 2) }
-	
-	func toCents() -> Int {
-		return Int(self.priceRounded() * 100)
-	}
+    
+    func priceRounded() -> Double { return rounded(toPlaces: 2) }
+    
+    func toCents() -> Int {
+        return Int(self.priceRounded() * 100)
+    }
 }

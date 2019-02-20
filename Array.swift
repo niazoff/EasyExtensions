@@ -9,9 +9,9 @@
 import Foundation
 
 public extension Array {
-	func appending(_ element: Element) -> Array {
-		var array = self
-		array.append(element)
-		return array
-	}
+    func appending(_ element: Element) -> Array {
+        var array = self
+        array.append(element)
+        return array
+    }
 }

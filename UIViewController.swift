@@ -9,11 +9,11 @@
 import UIKit
 
 public extension UIViewController {
-    var isVisible: Bool { return isViewLoaded && view.window != nil }
+    var isVisible: Bool { return self.isViewLoaded && self.view.window != nil }
     
     func add(asChildViewController viewController: UIViewController) {
-        addChild(viewController)
-        view.addSubview(viewController.view)
+        self.addChild(viewController)
+        self.view.addSubview(viewController.view)
         viewController.didMove(toParent: self)
     }
     

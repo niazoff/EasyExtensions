@@ -16,12 +16,12 @@ public extension UIButton {
     }
     
     func add(_ action: Action) {
-        addTarget(action.target, action: action.action, for: action.controlEvent)
+        self.addTarget(action.target, action: action.action, for: action.controlEvent)
     }
     
     func add(_ actions: [Action]) {
         for action in actions {
-            add(action)
+            self.add(action)
         }
     }
 }

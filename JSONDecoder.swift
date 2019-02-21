@@ -23,6 +23,6 @@ public extension JSONDecoder {
         }
         
         let data = try Data(contentsOf: url)
-        return try decode(T.self, from: data)
+        return try self.decode(T.self, from: data)
     }
 }

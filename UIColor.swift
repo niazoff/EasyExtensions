@@ -25,7 +25,7 @@ public extension UIColor {
             let blue = (hexInt) & 0xFF
             self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
         } else {
-            fatalError(Constants.badHexValue, file: #file, line: #line)
+            fatalError(Constants.badHexValue)
         }
     }
 }

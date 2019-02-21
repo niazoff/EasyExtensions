@@ -9,11 +9,7 @@
 import UIKit
 
 public extension Array where Element == NSLayoutConstraint {
-    func activateAll() {
-        NSLayoutConstraint.activate(self)
-    }
+    func activateAll() { NSLayoutConstraint.activate(self) }
     
-    func deactivateAll() {
-        NSLayoutConstraint.deactivate(self)
-    }
+    func deactivateAll() { NSLayoutConstraint.deactivate(self) }
 }

@@ -20,7 +20,7 @@ public extension Double {
         return (self * divisor).rounded() / divisor
     }
     
-    func priceRounded() -> Double { return rounded(toPlaces: 2) }
+    func priceRounded() -> Double { return self.rounded(toPlaces: 2) }
     
     func toCents() -> Int {
         return Int(self.priceRounded() * 100)

@@ -19,7 +19,7 @@ public extension MKMapView {
     
     func addAnnotation(at location: CLLocation) -> MKAnnotation {
         let annotation = Annotation(coordinate: location.coordinate)
-        addAnnotation(annotation)
+        self.addAnnotation(annotation)
         return annotation
     }
 }

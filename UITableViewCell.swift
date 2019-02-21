@@ -10,10 +10,10 @@ import UIKit
 
 public extension UITableViewCell {
     var tableView: UITableView? {
-        return next(UITableView.self)
+        return self.next(UITableView.self)
     }
     
     var indexPath: IndexPath? {
-        return tableView?.indexPath(for: self)
+        return self.tableView?.indexPath(for: self)
     }
 }

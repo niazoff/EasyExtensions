@@ -38,24 +38,28 @@ public extension UIView {
     
     /// Adds a shadow to the view's layer. Layer's `masksToBounds` property must be set to `true` for this to work properly.
     func add(_ shadow: Shadow) {
-        layer.shadowPath = shadow.path
-        layer.shadowColor = shadow.color.cgColor
-        layer.shadowOffset = shadow.offset
-        layer.shadowRadius = shadow.radius
-        layer.shadowOpacity = shadow.opacity
+        self.layer.shadowPath = shadow.path
+        self.layer.shadowColor = shadow.color.cgColor
+        self.layer.shadowOffset = shadow.offset
+        self.layer.shadowRadius = shadow.radius
+        self.layer.shadowOpacity = shadow.opacity
     }
     
     func fullViewConstraints(equalTo view: UIView, insetConstants: InsetConstants = .zero) -> [NSLayoutConstraint] {
-        return [leftAnchor.constraint(equalTo: view.leftAnchor, constant: insetConstants.left),
-                topAnchor.constraint(equalTo: view.topAnchor, constant: insetConstants.top),
-                rightAnchor.constraint(equalTo: view.rightAnchor, constant: insetConstants.right),
-                bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: insetConstants.bottom)]
+        return [
+            self.leftAnchor.constraint(equalTo: view.leftAnchor, constant: insetConstants.left),
+            self.topAnchor.constraint(equalTo: view.topAnchor, constant: insetConstants.top),
+            self.rightAnchor.constraint(equalTo: view.rightAnchor, constant: insetConstants.right),
+            self.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: insetConstants.bottom)
+        ]
     }
     
     func fullLayoutGuideConstraint(equalTo layoutGuide: UILayoutGuide, insetConstants: InsetConstants = .zero) -> [NSLayoutConstraint] {
-        return [leftAnchor.constraint(equalTo: layoutGuide.leftAnchor, constant: insetConstants.left),
-                topAnchor.constraint(equalTo: layoutGuide.topAnchor, constant: insetConstants.top),
-                rightAnchor.constraint(equalTo: layoutGuide.rightAnchor, constant: insetConstants.right),
-                bottomAnchor.constraint(equalTo: layoutGuide.bottomAnchor, constant: insetConstants.bottom)]
+        return [
+            self.leftAnchor.constraint(equalTo: layoutGuide.leftAnchor, constant: insetConstants.left),
+            self.topAnchor.constraint(equalTo: layoutGuide.topAnchor, constant: insetConstants.top),
+            self.rightAnchor.constraint(equalTo: layoutGuide.rightAnchor, constant: insetConstants.right),
+            self.bottomAnchor.constraint(equalTo: layoutGuide.bottomAnchor, constant: insetConstants.bottom)
+        ]
     }
 }

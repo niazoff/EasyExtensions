@@ -10,6 +10,6 @@ import UIKit
 
 public extension UICollectionReusableView {
     var collectionView: UICollectionView? {
-        return next(UICollectionView.self)
+        return self.next(UICollectionView.self)
     }
 }

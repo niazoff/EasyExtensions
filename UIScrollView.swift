@@ -10,10 +10,10 @@ import UIKit
 
 public extension UIScrollView {
     var isAtTop: Bool {
-        return contentOffset.y <= -contentInset.top
+        return self.contentOffset.y <= -self.contentInset.top
     }
     
     var isAtBottom: Bool {
-        return contentOffset.y >= (contentSize.height - bounds.height)
+        return self.contentOffset.y >= (self.contentSize.height - self.bounds.height)
     }
 }

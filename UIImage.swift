@@ -10,6 +10,6 @@ import UIKit
 
 public extension UIImage {
     var aspectRatio: CGFloat {
-        return size.height/size.width
+        return self.size.height/self.size.width
     }
 }

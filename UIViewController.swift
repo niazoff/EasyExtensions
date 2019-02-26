@@ -11,15 +11,15 @@ import UIKit
 public extension UIViewController {
     var isVisible: Bool { return self.isViewLoaded && self.view.window != nil }
     
-    func add(asChildViewController viewController: UIViewController) {
-        self.addChild(viewController)
-        self.view.addSubview(viewController.view)
-        viewController.didMove(toParent: self)
+    func add(_ childController: UIViewController) {
+        self.addChild(childController)
+        self.view.addSubview(childController.view)
+        childController.didMove(toParent: self)
     }
     
-    func remove(asChildViewController viewController: UIViewController) {
-        viewController.willMove(toParent: nil)
-        viewController.view.removeFromSuperview()
-        viewController.removeFromParent()
+    func remove(_ childController: UIViewController) {
+        childController.willMove(toParent: nil)
+        childController.view.removeFromSuperview()
+        childController.removeFromParent()
     }
 }

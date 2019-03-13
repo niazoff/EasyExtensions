@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Optional {
+public extension Optional {
     static func ?? (lhs: Wrapped?, rhs: @autoclosure () -> Never) -> Wrapped {
         switch lhs {
         case .none: rhs()

@@ -9,10 +9,10 @@
 import CoreLocation
 import MapKit
 
-extension CLLocationCoordinate2D {
+public extension CLLocationCoordinate2D {
     private struct Constants {
-        static let wazeBaseURL = "waze://"
-        static let googleMapsBaseURL = "comgooglemaps://"
+        static let googleMapsScheme = "comgooglemaps"
+        static let wazeScheme = "waze"
     }
     
     func openInMaps(withName name: String? = nil) {
@@ -23,12 +23,14 @@ extension CLLocationCoordinate2D {
     }
     
     func openInGoogleMaps() {
-        guard URL.canOpen(Constants.googleMapsBaseURL) else { return }
-        URL.open("\(Constants.googleMapsBaseURL)?q=\(latitude),\(longitude)")
+        guard let url = URL(string: "\(Constants.googleMapsScheme)://?q=\(latitude),\(longitude)")
+            else { return }
+        UIApplication.shared.open(url)
     }
     
-    func navigateInWaze() {
-        guard URL.canOpen(Constants.wazeBaseURL) else { return }
-        URL.open("\(Constants.wazeBaseURL)?ll=\(latitude),\(longitude)&navigate=yes")
+    func navigateToInWaze() {
+        guard let url = URL(string: "\(Constants.wazeScheme)://?ll=\(latitude),\(longitude)&navigate=yes")
+            else { return }
+        UIApplication.shared.open(url)
     }
 }

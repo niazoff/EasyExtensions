@@ -7,7 +7,7 @@
 //
 
 public extension Int {
-    var asString: String? {
+    func toString() -> String {
         return String(self)
     }
 }

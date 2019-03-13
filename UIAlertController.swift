@@ -8,6 +8,6 @@
 
 import UIKit
 
-extension UIAlertController {
+public extension UIAlertController {
     func addActions(_ actions: [UIAlertAction]) { actions.forEach { self.addAction($0) } }
 }

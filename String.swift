@@ -9,11 +9,11 @@
 import Foundation
 
 public extension String {
-    func capitalizingFirstLetter() -> String {
-        return self.prefix(1).uppercased() + self.lowercased().dropFirst()
-    }
-    
     mutating func capitalizeFirstLetter() {
         self = self.capitalizingFirstLetter()
+    }
+    
+    func capitalizingFirstLetter() -> String {
+        return self.prefix(1).uppercased() + self.lowercased().dropFirst()
     }
 }

@@ -8,20 +8,9 @@
 
 import Foundation
 
-public enum FixtureError: Error {
-    case fileNotFound
-}
-
 public extension JSONDecoder {
-    private struct Constants {
-        static let json = "json"
-    }
-    
-    func decodeFixture<T>(name: String, bundle: Bundle = .main) throws -> T where T: Decodable {
-        guard let url = bundle.url(forResource: name, withExtension: Constants.json) else {
-            throw FixtureError.fileNotFound
-        }
-        
+    func decode<T>(_ type: T.Type, from resourceName: String, bundle: Bundle = .main) throws -> T? where T: Decodable {
+        guard let url = bundle.url(forResource: resourceName, withExtension: "json") else { return nil }
         let data = try Data(contentsOf: url)
         return try self.decode(T.self, from: data)
     }

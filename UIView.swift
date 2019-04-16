@@ -25,8 +25,8 @@ public extension UIView {
         }
     }
     
-    /// Adds a shadow to the view's layer. Layer's `masksToBounds` property must be set to `true` for this to work properly.
-    func add(_ shadow: Shadow) {
+    /// Adds a shadow to the view's layer. Layer's `masksToBounds` property must be set to `false` for this to work properly.
+    func addShadow(_ shadow: Shadow) {
         self.layer.shadowPath = shadow.path
         self.layer.shadowColor = shadow.color.cgColor
         self.layer.shadowOffset = shadow.offset

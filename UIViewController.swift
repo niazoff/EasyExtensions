@@ -11,6 +11,14 @@ import UIKit
 public extension UIViewController {
     var isVisible: Bool { return self.isViewLoaded && self.view.window != nil }
     
+    func showEmptyBadge() {
+        tabBarItem.badgeValue = String()
+    }
+    
+    func clearBadge() {
+        tabBarItem.badgeValue = nil
+    }
+    
     func add(_ childController: UIViewController) {
         self.addChild(childController)
         self.view.addSubview(childController.view)

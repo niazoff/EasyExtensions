@@ -14,6 +14,6 @@ extension Date {
         let minuteAddend = (Int(Double(currentMinute/15).rounded(.down) + 1) * 15) - currentMinute
         guard let minuteSumDate = calendar.date(byAdding: .minute, value: minuteAddend, to: self)
             else { return nil }
-        return calendar.nextDate(after: minuteSumDate, matching: .init(second: 0), matchingPolicy: .nextTime, direction: .backward)
+        return calendar.date(bySetting: .second, value: 0, of: minuteSumDate)
     }
 }
